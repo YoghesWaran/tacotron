@@ -102,15 +102,15 @@ tts_stop_threshold = -11           # Value below which audio generation ends.
 
 # Training
 
-tts_schedule = [(10,  1e-3,  10_000,  32),   # progressive training schedule
-                (5,  1e-4, 20_000,  16),   # (r, lr, step, batch_size)
-                (2,  1e-4, 30_000,  8),
-                (1,  1e-4, 50_000,  8)]
+tts_schedule = [(10,  1e-3,  10_0,  32),   # progressive training schedule
+                (5,  1e-4, 20_0,  16),   # (r, lr, step, batch_size)
+                (2,  1e-4, 30_0,  8),
+                (1,  1e-4, 50_0,  8)]
 
 tts_max_mel_len = 1250              # if you have a couple of extremely long spectrograms you might want to use this
 tts_clip_grad_norm = 1.0            # clips the gradient norm to prevent explosion - set to None if not needed
-tts_checkpoint_every = 10_000       # checkpoints the model every X steps
-tts_plot_every = 1000
+tts_checkpoint_every = 10_0       # checkpoints the model every X steps
+tts_plot_every = 10
 
 # ------------------------------------------------------------------------------------------------------------------#
 
@@ -142,14 +142,14 @@ forward_dropout = 0.1
 
 # Training
 
-forward_schedule = [(1e-4, 10_000,  32),    # progressive training schedule
-                    (1e-4, 300_000,  32),   # (lr, step, batch_size)
-                    (2e-5, 600_000,  32)]   # (lr, step, batch_size)
+forward_schedule = [(1e-4, 10_0,  32),    # progressive training schedule
+                    (1e-4, 300_0,  32),   # (lr, step, batch_size)
+                    (2e-5, 600_0,  32)]   # (lr, step, batch_size)
 
 forward_max_mel_len = 1250              # if you have a couple of extremely long spectrograms you might want to use this
 forward_clip_grad_norm = 1.0            # clips the gradient norm to prevent explosion - set to None if not needed
-forward_checkpoint_every = 10_000        # checkpoints the model every X steps
-forward_plot_every = 1000
+forward_checkpoint_every = 10_0        # checkpoints the model every X steps
+forward_plot_every = 10
 
 forward_filter_attention = True               # whether to filter data with bad attention scores
 forward_min_attention_sharpness = 0.5         # filter data with bad attention sharpness score, if 0 then no filter
